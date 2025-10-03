@@ -1,7 +1,8 @@
 
+
 import React, { useState } from 'react';
-import type { PortfolioData, Experience, Education } from '../types';
-import { BriefcaseIcon, GraduationCapIcon, LightbulbIcon, MapPinIcon, UserIcon } from './icons/ContentIcons';
+import type { PortfolioData, Experience, Education, View } from '../types';
+import { BriefcaseIcon, GraduationCapIcon, LightbulbIcon, MapPinIcon } from './icons/ContentIcons';
 import { GitHubIcon, LinkedInIcon } from './icons/SocialIcons';
 
 // FIX: Specify the props for the icon element to resolve TypeScript errors with React.cloneElement.
@@ -53,7 +54,12 @@ const TimelineItem: React.FC<{ item: Experience | Education; isLast: boolean }> 
     );
 };
 
-const MainView: React.FC<{ data: PortfolioData }> = ({ data }) => {
+interface MainViewProps {
+    data: PortfolioData;
+    setCurrentView: (view: View) => void;
+}
+
+const MainView: React.FC<MainViewProps> = ({ data, setCurrentView }) => {
     const [hoverDirectionToggle, setHoverDirectionToggle] = useState(false);
     const githubLink = data.profile.links?.find(l => l.name.toLowerCase() === 'github');
     const linkedinLink = data.profile.links?.find(l => l.name.toLowerCase() === 'linkedin');
@@ -80,14 +86,17 @@ const MainView: React.FC<{ data: PortfolioData }> = ({ data }) => {
                         {linkedinLink && (
                             <a href={linkedinLink.url} target="_blank" rel="noopener noreferrer" className="group cursor-pointer inline-flex items-center justify-center p-2 rounded-full transition-all duration-300 ease-in-out text-gray-500 dark:text-text-secondary hover:text-white dark:hover:text-primary hover:bg-gradient-to-br from-sky-400 to-fuchsia-500 hover:scale-110 hover:shadow-lg dark:hover:shadow-accent/20"><LinkedInIcon className="w-7 h-7" /></a>
                         )}
-                         <a href={`mailto:${data.profile.email}`} className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 dark:text-primary dark:bg-accent hover:bg-gray-700 dark:hover:bg-highlight transition-all">
+                         <button
+                            onClick={() => setCurrentView('contact')}
+                            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 dark:text-primary dark:bg-accent hover:bg-gray-700 dark:hover:bg-highlight transition-all"
+                         >
                             Contact Me
-                        </a>
+                        </button>
                     </div>
                 </div>
                  <div className="flex-shrink-0">
                     <div 
-                        className="relative w-56 h-56 sm:w-64 sm:h-64 group cursor-pointer"
+                        className="relative w-48 h-48 sm:w-56 sm:h-56 group cursor-pointer"
                         onMouseEnter={() => setHoverDirectionToggle(prev => !prev)}
                     >
                         <div className={`absolute inset-0 bg-gradient-to-br from-sky-400 to-fuchsia-500 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500 ease-in-out animate-pulse ${hoverDirectionToggle ? 'group-hover:rounded-[40%_60%_70%_30%_/_40%_40%_60%_60%]' : 'group-hover:rounded-[70%_30%_40%_60%_/_60%_60%_40%_40%]'}`}></div>

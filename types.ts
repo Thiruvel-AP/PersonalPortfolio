@@ -1,5 +1,5 @@
 
-export type View = 'main' | 'projects' | 'contact' | 'manage';
+export type View = 'main' | 'projects' | 'contact';
 
 export interface Link {
   name: string;

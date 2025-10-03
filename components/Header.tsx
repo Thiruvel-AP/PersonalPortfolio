@@ -5,7 +5,6 @@ import { MoonIcon, SunIcon } from './icons/ContentIcons';
 interface HeaderProps {
   currentView: View;
   setCurrentView: (view: View) => void;
-  hasData: boolean;
   theme: string;
   onToggleTheme: () => void;
 }
@@ -15,18 +14,16 @@ const NavLink: React.FC<{
   currentView: View;
   setCurrentView: (view: View) => void;
   children: React.ReactNode;
-  disabled?: boolean;
-}> = ({ viewName, currentView, setCurrentView, children, disabled = false }) => {
+}> = ({ viewName, currentView, setCurrentView, children }) => {
   const isActive = currentView === viewName;
   return (
     <button
-      onClick={() => !disabled && setCurrentView(viewName)}
+      onClick={() => setCurrentView(viewName)}
       className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative ${
         isActive
           ? 'text-gray-900 dark:text-accent'
           : 'text-gray-500 dark:text-text-secondary hover:text-gray-900 dark:hover:text-text-primary'
-      } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-      disabled={disabled}
+      }`}
       aria-current={isActive ? 'page' : undefined}
     >
       {children}
@@ -35,7 +32,7 @@ const NavLink: React.FC<{
   );
 };
 
-const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, hasData, theme, onToggleTheme }) => {
+const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, theme, onToggleTheme }) => {
   return (
     <header className="sticky top-0 z-50 bg-white/50 dark:bg-primary/50 backdrop-blur-lg border-b border-gray-200/50 dark:border-border-color/50">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,17 +42,17 @@ const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, hasData, t
               onClick={() => setCurrentView('main')}
               className="font-extrabold text-xl text-gray-900 dark:text-white tracking-wider transition-opacity hover:opacity-80"
             >
-              My Portfolio
+              Thiruvel's Portfolio
             </button>
           </div>
           <div className="flex items-center space-x-2">
-            <NavLink viewName="main" currentView={currentView} setCurrentView={setCurrentView} disabled={!hasData}>
+            <NavLink viewName="main" currentView={currentView} setCurrentView={setCurrentView}>
               Home
             </NavLink>
-            <NavLink viewName="projects" currentView={currentView} setCurrentView={setCurrentView} disabled={!hasData}>
+            <NavLink viewName="projects" currentView={currentView} setCurrentView={setCurrentView}>
               Projects
             </NavLink>
-            <NavLink viewName="contact" currentView={currentView} setCurrentView={setCurrentView} disabled={!hasData}>
+            <NavLink viewName="contact" currentView={currentView} setCurrentView={setCurrentView}>
               Contact
             </NavLink>
              <button
