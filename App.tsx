@@ -3,9 +3,10 @@ import Header from './components/Header';
 import MainView from './components/MainView';
 import ProjectsView from './components/ProjectsView';
 import ContactView from './components/ContactView';
-import { initialData } from './Data/Data';
+import { initialData } from './PortfolioData/Data';
 import type { PortfolioData, View } from './types';
 import { GitHubIcon, LinkedInIcon, MailIcon } from './components/icons/SocialIcons';
+
 
 
 const App: React.FC = () => {

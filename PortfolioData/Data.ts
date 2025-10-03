@@ -1,4 +1,5 @@
 import type { PortfolioData } from '../types';
+import profileImage from "./Thiruvel_Portfolio.jpg";
 
 export const initialData: PortfolioData = {
   profile: {
@@ -8,7 +9,7 @@ export const initialData: PortfolioData = {
     email: "apthiruvel@gmail.com",
     phone: "+44 07741016954",
     summary: "As a proactive data scientist and software engineer, I have spent approximately two years developing production-ready, scalable applications using modern engineering practices. I combine mathematical rigor and pragmatic, product-focused engineering to turn complex problems into measurable, data-driven solutions. I am actively exploring finance, markets, and cryptocurrency, applying AI and statistical methods to extract signals and risk decisions.",
-    imageUrl: "components/Assets/Thiruvel_Portfolio.jpg",
+    imageUrl: profileImage,
     links: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/thiruvel-a-p" },
       { name: "GitHub", url: "https://github.com/Thiruvel-AP" }
