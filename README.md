@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🌐 Personal Portfolio
+   - This is my personal portfolio website, designed and developed to showcase my skills, projects, and experience in the field of Data Science, AI, and technology.
+   - The portfolio provides a brief introduction about me, highlights my featured projects, and includes contact links to connect easily.
 
-# Run and deploy your AI Studio app
+🚀 Tech Stack
+   - React JS – Frontend framework for building a responsive UI
+   - Tailwind CSS – Utility-first CSS framework for fast and modern styling
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1AVRgknRsrl0f_86GHaTeZF5vor9yOAYo
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+✨ Features
+   - 🖥️ Fully responsive design for all devices
+   - 🎨 Clean and modern UI with Tailwind CSS
+   - 📂 Projects showcase with descriptions and links
+   - 📬 Contact section for collaboration opportunities
