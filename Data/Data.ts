@@ -113,10 +113,10 @@ export const initialData: PortfolioData = {
     {
       name: "GridDQN",
       description: "This project is to train an agent in a custom grid world with Deep Q-Network (DQN) from scratch. The agent learns optimal paths via reward-driven exploration and converges to a stable policy for shortest-path navigation.",
-      technologies: ["Python", "Tensor-flow"],
-      features: ["Using a Q-value trained a on-policy agent to play grid world."],
+      technologies: ["Python", "Tensor-flow", "NumPy"],
+      features: ["Using a Q-value trained a off-policy agent to play grid world."],
       imageUrl: "https://imgs.search.brave.com/YKAchA7epo1Al70WqQU5Y-zwVg3wk91CtEt17YJ4aEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaGFy/ZWQuZmFzdGx5LnN0/ZWFtc3RhdGljLmNv/bS9zdG9yZV9pdGVt/X2Fzc2V0cy9zdGVh/bS9hcHBzLzM5Njg5/MC9oZWFkZXIuanBn/P3Q9MTQ1OTk3MjM3/NA",
-      link: ""
+      link: "https://github.com/Thiruvel-AP/GridDQN"
     },
     {
       name: "Stack Overflow Data Analysis",
