@@ -1,0 +1,5 @@
+{
+  "name": "Thiruvel Portfolio",
+  "description": "A web portfolio that uses AI to extract and display data from an uploaded resume PDF. The data is stored in the browser's local storage and can be updated manually.",
+  "requestFramePermissions": []
+}
