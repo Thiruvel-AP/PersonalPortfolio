@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, theme, onT
               onClick={() => setCurrentView('main')}
               className="font-extrabold text-xl text-gray-900 dark:text-white tracking-wider transition-opacity hover:opacity-80"
             >
-              Thiruvel's Portfolio
+              THIRUVEL ANDAGURUNATHAN PANDIAN
             </button>
           </div>
           <div className="flex items-center space-x-2">
