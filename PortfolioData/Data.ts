@@ -17,9 +17,20 @@ export const initialData: PortfolioData = {
   },
   experience: [
     {
+      role: "Data Consultant",
+      company: "180DC Bristol",
+      period: "Oct 2025 - Present",
+      location: "Bristol, United Kingdom",
+      description: [
+        "Selected to join the student-led consultant team collaboration to provide business driven client-centric solutions and client partnerships for a startup in Madrid.",
+        "Along with the other consultants, will gather the client requirements and suggested the solution to create an AI agent with Model Context Protocol (MCP) to satisfy the client requirements." , 
+        "As a data consultant, I am working on a dynamic dashboard solution for the business."
+      ]
+    },
+    {
       role: "Software Engineer",
       company: "Avasoft",
-      period: "Jul 2023 - January 2024",
+      period: "Jul 2023 - January 2025",
       location: "Chennai, India",
       description: [
         "Developed reusable templates using SwiftUI and UIKit, streamlining the development process and reducing repetitive coding efforts across multiple projects.",
