@@ -149,17 +149,6 @@ Notable experience: Flutter expense management app with ISAR offline storage + P
 
 ---
 
-## Featured Projects (from live portfolio)
-
-| Project | Stack | Links |
-|---|---|---|
-| **Bitcoin LSTM Forecasting** | Python · TensorFlow GPU · FastAPI · Docker · YFinance | [GitHub](https://github.com/Thiruvel-AP/BitcoinForecasting) |
-| **Pokémon Multi-Output Classification** | Python · scikit-learn · Pandas · Kaggle | [GitHub](https://github.com/Thiruvel-AP/Pokemon_Classification) |
-| **GridDQN** | Python · TensorFlow · NumPy | [GitHub](https://github.com/Thiruvel-AP/GridDQN) |
-| **Stack Overflow EDA 2023** | Python · Pandas · Matplotlib · Seaborn | [GitHub](https://github.com/Thiruvel-AP/DS_Project1) |
-
----
-
 ## Quickstart
 
 ```bash
