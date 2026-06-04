@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, theme, onT
               onClick={() => setCurrentView('main')}
               className="font-extrabold text-xl text-gray-900 dark:text-white tracking-wider transition-opacity hover:opacity-80"
             >
-              Hi, I'm Thiruvel, a Data Scientist - I build AI, Data & ML Projects.
+              Thiruvel A P
             </button>
           </div>
           <div className="flex items-center space-x-2">

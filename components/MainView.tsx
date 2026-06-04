@@ -78,7 +78,9 @@ const MainView: React.FC<MainViewProps> = ({ data, setCurrentView }) => {
                         <MapPinIcon className="w-5 h-5 mr-2" />
                         {data.profile.location}
                     </p>
-                    <p className="text-gray-600 dark:text-text-secondary leading-relaxed pt-4 max-w-xl mx-auto md:mx-0">{data.profile.summary}</p>
+                    <p className="whitespace-pre-line text-gray-600 dark:text-text-secondary leading-relaxed pt-4 max-w-xl mx-auto md:mx-0">
+                    {data.profile.summary}
+                    </p>
                      <div className="flex items-center justify-center md:justify-start space-x-4 pt-4">
                         {githubLink && (
                             <a href={githubLink.url} target="_blank" rel="noopener noreferrer" className="group cursor-pointer inline-flex items-center justify-center p-2 rounded-full transition-all duration-300 ease-in-out text-gray-500 dark:text-text-secondary hover:text-white dark:hover:text-primary hover:bg-gradient-to-br from-sky-400 to-fuchsia-500 hover:scale-110 hover:shadow-lg dark:hover:shadow-accent/20"><GitHubIcon className="w-7 h-7" /></a>
