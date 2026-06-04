@@ -11,3 +11,5 @@
    - 🎨 Clean and modern UI with Tailwind CSS
    - 📂 Projects showcase with descriptions and links
    - 📬 Contact section for collaboration opportunities
+
+Refersh command: npm run deploy

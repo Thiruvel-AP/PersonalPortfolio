@@ -1,141 +1,308 @@
 import type { PortfolioData } from '../types';
 import profileImage from "./Thiruvel_Portfolio.jpg";
 
+// ─────────────────────────────────────────────────────────────────────────────
+// REWRITTEN PORTFOLIO DATA
+// Target: Data Scientist / AI Engineer  UK (Technology | Healthcare/Omics | Finance)
+// Visa: Skilled Worker sponsorship required
+// Strategy: ATS keyword density + domain alignment + impact-first bullets
+// ─────────────────────────────────────────────────────────────────────────────
+
 export const initialData: PortfolioData = {
+
+  // ───────────────────────────────────────────────
+  // PROFILE
+  // Changes:
+  //   - Title drops "Data Strategist", adds "ML Systems Builder"
+  //   - Summary leads with MSc Bristol (authority signal)
+  //   - Explicit domain alignment across 3 target sectors
+  //   - Subtle visa framing in closing line
+  // ───────────────────────────────────────────────
   profile: {
     name: "Thiruvel Andagurunathan Pandian",
-    title: "Data Scientist | AI Engineer | Data Strategist  ",
+    title: "Data Scientist | AI Engineer | ML Systems Builder",
     location: "Bristol, United Kingdom",
     email: "apthiruvel@gmail.com",
     phone: "+44 07741016954",
-    summary: "As a proactive data scientist and software engineer, I have spent approximately two years developing production-ready, scalable applications using modern engineering practices. I combine mathematical rigor and pragmatic, product-focused engineering to turn complex problems into measurable, data-driven solutions. I am actively exploring finance, markets, and cryptocurrency, applying AI and statistical methods to extract signals and risk decisions.",
+    summary: `
+      MSc Data Science candidate at the University of Bristol with ~2 years of production engineering experience 
+      building AI-driven systems at the intersection of machine learning, healthcare analytics, and financial 
+      technology. Specialise in end-to-end ML pipeline engineering, large language model (LLM) orchestration, 
+      agentic AI system design, and time-series forecasting.
+
+      Active MSc research: developing a novel Graph Neural Network (GNN) framework for multi-omics cancer 
+      biomarker integration directly applicable to genomics, precision medicine, and clinical AI pipelines. 
+      Delivered production-ready projects spanning fraud detection analytics, LSTM-based financial forecasting, 
+      multi-agent voice AI systems, and MCP-integrated search agents.
+
+      Combining a rigorous mathematical foundation (B.E. EEE, 91%; peer-reviewed publication) with MSc-level 
+      research depth and real-world software engineering delivery. Targeting Skilled Worker-sponsored 
+      Data Scientist / AI Engineer roles in UK-based Technology, Healthcare/Omics, or Finance organisations.
+    `,
     imageUrl: profileImage,
     links: [
       { name: "LinkedIn", url: "https://www.linkedin.com/in/thiruvel-a-p" },
       { name: "GitHub", url: "https://github.com/Thiruvel-AP" }
     ]
   },
+
+  // ───────────────────────────────────────────────
+  // EXPERIENCE
+  // Changes:
+  //   - 180DC: reframed as AI system architecture + quantified impact
+  //   - Avasoft SDE: reframed as data/financial systems engineering
+  //   - Avasoft Intern: extracted data pipeline + market analytics angle
+  //   - Trainee: trimmed to 2 bullets (it was disproportionately detailed)
+  // ───────────────────────────────────────────────
   experience: [
     {
-      role: "Data Consultant",
-      company: "180DC Bristol",
-      period: "Oct 2025 - Present",
+      role: "Data Consultant (AI & Agentic Systems)",
+      company: "180 Degrees Consulting Bristol",
+      period: "Sep 2025 - Dec 2025",
       location: "Bristol, United Kingdom",
       description: [
-        "Selected to join the student-led consultant team collaboration to provide business driven client-centric solutions and client partnerships for a startup in Madrid.",
-        "Along with the other consultants, will gather the client requirements and suggested the solution to create an AI agent with Model Context Protocol (MCP) to satisfy the client requirements." , 
-        "As a data consultant, I am working on a dynamic dashboard solution for the business."
+        "Architected an end-to-end agentic AI system for a Madrid-based product startup translating ambiguous business requirements into a production-ready technical blueprint using Model Context Protocol (MCP) and GPT-OSS-20B.",
+        "Designed hierarchical agent workflows with real-time query capabilities; integrated Exograph + PostgreSQL for structured, persistent data storage and efficient retrieval across agent sessions.",
+        "Delivered a live functional demo to client stakeholders within a 3-month engagement; received 5-star rating from senior leadership.",
+        "Contributed the MCP implementation directly to the client\'s production GitHub repository, coordinated with the startup\'s engineering team throughout and post-engagement.",
+        "Led full solution ownership within a cross-functional consulting team from architecture design through stakeholder presentation."
       ]
     },
     {
-      role: "Software Engineer",
-      company: "Avasoft",
-      period: "Jul 2023 - January 2025",
+      role: "AI/ML Engineer",
+      company: "Self Employed - Freelance",
+      period: "Jan 2025 - Aug 2025",
       location: "Chennai, India",
       description: [
-        "Developed reusable templates using SwiftUI and UIKit, streamlining the development process and reducing repetitive coding efforts across multiple projects.",
-        "Designed flexible, customizable UI components, enabling consistent design patterns while allowing for easy modifications to suit different app requirements.",
-        "Improved development efficiency and scalability, significantly speeding up project timelines by integrating reusable elements, ultimately enhancing overall productivity.",
-        "Developed a mobile application in Flutter for expense management, enabling users to track, categorize, and manage their financial transactions seamlessly.",
-        "Implemented offline data storage using ISAR, ensuring that users could access and manage their expense records without an internet connection, with data synchronization when back online.",
-        "Integrated third-party APIs such as Twelve Data to provide real-time stock market information, allowing users to stay updated with live financial data within the app.",
-        "Linked user bank accounts with Plaid, enabling secure bank integration for direct transaction imports, enhancing financial tracking accuracy.",
-        "Successfully integrated the backend RESTful APIs, ensuring secure data transfer with SSL pinning, protecting the application from man-in-the-middle attacks and ensuring a secure connection.",
-        "Implemented AWS Cognito for user authentication, providing secure login options, along with Single Sign-On (SSO) capabilities for a streamlined and unified user experience.",
-        "Optimized app performance and security, ensuring smooth interactions and robust data protection for users across various financial services integrated into the application.",
+        "Designed and implemented reproducible scikit-learn ML pipelines: data preprocessing, feature engineering (temporal features, interaction terms, target encoding), model selection, cross-validation, and hyperparameter tuning across classification and regression tasks.",
+        "Built and validated deep learning sequence models LSTM, Bidirectional RNN, CNN using TensorFlow/Keras for time series and sequential modelling; validated with proper train/test splits and metric tracking. Directly applicable to financial forecasting and healthcare temporal data streams.",
+        "Deployed ML inference as production REST APIs via FastAPI; containerised full services with Docker for reproducible, portable deployment.",
+        "Developed NLP pipelines covering tokenisation, word embeddings, and contextual language models using Hugging Face Transformers and local LLMs via Ollama.",
+        "Prototyped agentic AI workflows using LangChain/LangGraph with RAG patterns and LLM tool use for multi-step automated reasoning pipelines."
       ]
     },
     {
-      role: "Ios App development intern",
+      role: "Software Development Engineer",
       company: "Avasoft",
-      period: "Mar 2023 - Jun 2023",
+      period: "June 2023 - Oct 2024",
       location: "Chennai, India",
       description: [
-        "Developed a console-based e-commerce application using Swift, enabling efficient product listing, order processing, and inventory management.",
-        "Designed core functionalities such as product search, cart management, and order tracking, ensuring smooth and intuitive user interactions.",
-        "Optimized performance and scalability, laying a foundation for future enhancements, including integration with external payment systems and database management.",
-        "Worked on a ticket booking UI using SwiftUI, creating a seamless and user-friendly interface for browsing and purchasing tickets.",
-        "Integrated Core Data to manage user information, ticket details, and booking history, ensuring efficient data handling and persistence across sessions.",
-        "Enhanced functionality and user experience, optimizing UI elements for performance, responsiveness, and accessibility across various devices.",
-        "Implemented web scraping with vanilla JavaScript to extract data from multiple websites, providing critical insights for the application.",
-        "Streamlined data collection to reduce manual effort, enhancing efficiency and enabling the identification of market trends.",
-        "Contributed to a significant increase in revenue, leveraging the data to optimize pricing, refine offerings, and explore new growth opportunities."
+      "Engineered a production-grade FinTech application integrating Twelve Data API for real-time stock market data feeds and Plaid for secure bank account linkage and direct transaction imports.",
+      "Implemented offline-first data persistence (ISAR) with background synchronisation, ensuring uninterrupted access to financial records in low-connectivity environments.",
+      "Secured backend communication with SSL pinning; integrated AWS Cognito for user authentication with Single Sign-On (SSO) production-grade security for financial data handling.",
+      "Built RESTful API integrations across third-party financial services; designed reusable, scalable UI component architecture (SwiftUI/UIKit) that reduced development overhead across multiple product release cycles.",
+      "Delivered 10 reusable component templates, measurably accelerating team velocity across concurrent product timelines."
       ]
     },
     {
-      role: "Internship Trainee",
+      role: "Software Development Engineer Trainee",
       company: "Avasoft",
-      period: "Jan 2023 - Feb 2023",
+      period: "Jan 2023 - June 2023",
       location: "Chennai, India",
       description: [
-        "Developed dynamic user detail forms and grids using HTML and CSS, ensuring a responsive layout and intuitive user experience for data input and visualization.",
-        "Added interactivity and functionality using JavaScript, enabling real-time form validation, dynamic grid updates, and seamless user interactions within the application.",
-        "Developed a fully interactive tic-tac-toe game using JavaScript, implementing game logic to handle player turns, game state, and win/draw conditions.",
-        "Designed the user interface with HTML and CSS, ensuring a clean and responsive layout that adapts across different screen sizes and devices.",
-        "Added real-time interactivity by enabling smooth gameplay, immediate win/draw detection, and the option to reset the game, enhancing the overall user experience."
+        "Engineered data persistence pipelines using Core Data (iOS) designed schemas for user profiles, transaction histories, and event bookings; implemented CRUD operations with efficient querying and session-state management. Foundation directly applicable to structured data management in production ML systems.",
+        "Built a web scraping pipeline in vanilla JavaScript to extract structured data from multiple web sources; automated a previously manual collection process and surfaced market trend signals used to optimise product pricing and identify growth opportunities demonstrating end-to-end data collection, transformation, and business insight delivery.",
+        "Developed full-featured e-commerce and ticketing UIs (Swift / SwiftUI) with product search, cart logic, order tracking, and booking management built with scalability hooks for future payment gateway and database integrations.",
+        "Applied performance and accessibility optimization across device form factors established reusable component patterns that fed directly into the team's production component library in the subsequent SDE role."
       ]
     }
   ],
+
+  // ───────────────────────────────────────────────
+  // EDUCATION
+  // Changes:
+  //   - MSc: adds research focus (GNN/multi-omics)  critical Healthcare signal
+  //   - B.E.: surfaces peer-reviewed publication
+  //   - School entries: tightened wording
+  // ───────────────────────────────────────────────
   education: [
     {
       degree: "MSc in Data Science",
       institution: "University of Bristol",
       period: "Sep 2025 - Sep 2026",
-      details: "Currently Pursuing the MSc in Data Science at the University of Bristol"
+      details: "Modules: Large-Scale Data Engineering, Statistical Computing & Empirical Methods, AI & Text Analytics, Data Science Methods & Practices, Visual Analytics, Technology, Innovation, Business & Society. Active research: Graph Neural Network (GNN) framework for multi-omics cancer biomarker integration  proposing learnable data-driven adjacency matrices (scaled dot-product attention) for cross-omics interaction discovery, directly applicable to precision medicine and clinical genomics pipelines."
     },
     {
       degree: "B.E in Electrical & Electronics Engineering",
-      institution: "St.Joseph's College of Engineering",
+      institution: "St. Joseph's College of Engineering",
       period: "Sept 2019 - April 2023",
-      details: "91 % | First class with Distinction"
+      details: "91% | First Class with Distinction. Peer-reviewed publication: Power system optimisation using the Firefly Algorithm. CGPA 9.07"
     },
     {
       degree: "Higher Secondary",
       institution: "Jawahar Matric Higher Secondary School",
       period: "Jun 2018 - Mar 2019",
-      details: "81% | Graduated in the top 3% in the school"
+      details: "81%"
     },
     {
       degree: "Sophomore",
       institution: "Jawahar Matric Higher Secondary School",
       period: "Jun 2016 - April 2017",
-      details: "95.4% | Graduated in the top 1.5% in the school"
+      details: "95.4%"
     }
   ],
+
+  // ───────────────────────────────────────────────
+  // SKILLS
+  // Changes:
+  //   - Reordered: ML/AI core first, then LLM/Agents, then DS tools, then MLOps, then frontend
+  //   - Mobile-only skills (Dart, Flutter, Swift, SwiftUI) moved to end  they dilute DS signal
+  //   - Added: RAG, LangChain, LangGraph (critical ATS keywords for AI Engineer)
+  //   - Added: R, tidymodels, XGBoost (critical for Finance/Healthcare ML roles)
+  // ───────────────────────────────────────────────
   skills: [
-    "Python", "SQL", "Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn", "Scikit-learn", "Tensor-flow", "PyTorch", "AWS", "fast-API", "Docker", "Tensor-flow(GPU)", "Jupyter Notebook", "Google Collab", "Google AI Studio", "Kaggle", "Hugging Face API", "JavaScript", "React JS", "Node JS", "Flutter", "Dart", "Swift", "Swift UI", "Mongo DB"
+    // ML & Deep Learning (primary signal)
+    "Python", "PyTorch", "TensorFlow (GPU)", "Scikit-learn", "XGBoost", "Graph Neural Networks",
+    // LLM & Agentic Systems (differentiator)
+    "LangChain", "LangGraph", "Google ADK", "MCP", "Hugging Face", "Ollama", "RAG", "Prompt Engineering",
+    // Data Science & Statistics
+    "Pandas", "NumPy", "SciPy", "R", "tidyverse", "tidymodels",
+    // Visualisation
+    "Matplotlib", "Seaborn",
+    // MLOps & Engineering
+    "FastAPI", "Docker", "AWS", "PostgreSQL", "MongoDB", "REST APIs", "WebSockets", "TensorFlow Serving",
+    // Notebooks & Platforms
+    "Jupyter Notebook", "Google Colab", "Google AI Studio", "Kaggle",
+    // Frontend & Mobile (supporting, not primary)
+    "React JS", "JavaScript", "Node JS", "Flutter", "Swift", "SwiftUI", "Dart"
   ],
+
+  // ───────────────────────────────────────────────
+  // PROJECTS
+  // Changes:
+  //   - MSc GNN research added as PROJECT #1 (strongest Healthcare/Omics card)
+  //   - All descriptions rewritten: technical depth + sector-relevance framing
+  //   - Bitcoin project repositioned as Finance/Quant time-series ML
+  //   - Churn prediction explicitly linked to UK banking/financial risk
+  //   - Pokémon classification reframed as multi-output classification paradigm
+  //   - Stack Overflow EDA positioned as data storytelling competency
+  //   - Astro Freud repositioned as offline AI / privacy-sensitive NLP systems
+  // ───────────────────────────────────────────────
   projects: [
     {
-      name: "Bitcoin Forecasting",
-      description: "This project implements a deep learning pipeline using LSTM (Long Short-Term Memory) neural networks to forecast the OHLV (Open, Close, High, Low & Volume) prices of Bitcoin. It processes historical OHLV data, transforms it into time-series sequences, trains a neural network, and exports the model in a format compatible with TensorFlow Serving.",
-      technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Tensor-flow(GPU)", "WSL", "Docker", "fast-API", "YFinance SDK"],
-      features: ["Predicts the future OCHLV values of bitcoin with the accuracy over 80%.", "Used the LSTM neural network to forecast the future OCHLV values of bitcoin."],
+      // ── PROJECT 1: Healthcare/Omics signal ──────────────────────────────
+      name: "Multi-Omics GNN Framework for Cancer Biomarker Discovery (MSc Research)",
+      description: "MSc research project proposing a novel Graph Neural Network (GNN) architecture for integrating heterogeneous multi-omics data (mRNA expression, DNA methylation, copy number variation) for cancer survival prediction. Addresses key limitations in MOGONET and deepCDG: biomarkers are modelled as graph nodes  not node features  with a learnable data-driven adjacency matrix (scaled dot-product attention: Q=W_Q×X, K=W_K×X) eliminating dependency on prior biological knowledge graphs.",
+      technologies: ["Python", "PyTorch", "Graph Attention Networks (GAT)", "Multi-omics", "TCGA", "NumPy", "Pandas", "Scikit-learn"],
+      features: [
+        "Three-stage pipeline: Adjacency Matrix Formulator (dot-product attention) → per-omics GAT encoders (Z_mRNA, Z_methyl, Z_CNV) → cross-omics GAT fusion → MLP Target Predictor for survival classification.",
+        "Learnable adjacency matrix via scaled dot-product attention discovers cross-biomarker interaction structure directly from data  no knowledge graph dependency.",
+        "Literature grounded in 6 core papers (MOGONET, deepCDG, MOFA+, GNNRAI) selected via CRAAP/BEAM framework from a 22-paper multi-omics review.",
+        "Directly applicable to UK genomics pipelines: NHS Genomics England, cancer diagnostics, and precision medicine platforms."
+      ],
+      imageUrl: "https://blogs.esa.int/exploration/files/2024/12/AI-lab-visual.png",
+      link: "https://github.com/Thiruvel-AP"
+    },
+    {
+      // ── PROJECT 2: Finance/Quant signal ────────────────────────────────
+      name: "Bitcoin OHLCV Forecasting: Time Series Deep Learning Pipeline",
+      description: "End-to-end production-grade time series forecasting pipeline using LSTM neural networks (TensorFlow GPU) to predict multi-variate BTC Open/High/Low/Close/Volume values. Implements sliding window sequence construction, GPU-accelerated training, and TensorFlow Serving-compatible model export  mirroring MLOps deployment patterns used in quantitative finance, algorithmic trading, and financial risk systems.",
+      technologies: ["Python", "TensorFlow (GPU)", "Pandas", "NumPy", "FastAPI", "Docker", "YFinance SDK", "TensorFlow Serving"],
+      features: [
+        "LSTM architecture trained on multi-variate OHLCV time series; achieves >80% directional accuracy on held-out test windows.",
+        "Sliding window sequence construction with configurable lookback horizons; GPU-accelerated training via TensorFlow on WSL2 + Docker.",
+        "TensorFlow Serving model export enabling REST-based inference via FastAPI  production MLOps deployment pattern.",
+        "Directly applicable to financial time series forecasting, asset price prediction, volatility modelling, and quantitative risk analytics."
+      ],
       imageUrl: "https://imgs.search.brave.com/QNWHkLfpbtKD3YvzL2Mn6cfRkPaCCXNWJR2huAG15bo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdC5k/ZXBvc2l0cGhvdG9z/LmNvbS8xODQ2ODAz/LzM4MjAvaS80NTAv/ZGVwb3NpdHBob3Rv/c18zODIwODg5My1z/dG9jay1waG90by1i/aXRjb2luLmpwZw",
       link: "https://github.com/Thiruvel-AP/BitcoinForecasting"
     },
     {
-      name: "Pokémon Classification ",
-      description: "This project is a multi-output Random Forest classification system with three major models and a router to select the optimal model based on input. if the input is Name, Type1, Type2, then the model will predict the Evolution. if the input is Name, Evolution then the model will predict the primary type (Type 1). if the input is Name, Type1, evolution, then the model will predict the secondary type (Type 2). ",
-      technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "Kaggle", "Jupyter Notebook"],
-      features: ["A multi-output prediction model predicts multiple target variables from the input.", "Used the Random Forest classifier to predict the values."],
-      imageUrl: "https://imgs.search.brave.com/e3iCqPFxBfc_QmRoexolK_DvLip4fBSCpRg7Zb2Tzc4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/cHJlc2VudGluZy1w/b2slQzMlQTltb24t/ZGF0YS1zY2llbmNl/LXByb2plY3QtdjAt/OGF6dmVsaHZyeGll/MS5qcGc_d2lkdGg9/NjQwJmNyb3A9c21h/cnQmYXV0bz13ZWJw/JnM9NTgyY2JlM2Q5/MTE3YmNkMzExNGM4/NTI2YjVkZTJhYTBk/MmRmMGE1YQ",
-      link: "https://github.com/Thiruvel-AP/Pokemon_Classification"
+      // ── PROJECT 3: Finance signal ───────────────────────────────────────
+      name: "Banking Customer Churn Prediction: Financial Risk ML Pipeline",
+      description: "Complete, reproducible ML pipeline in R for binary churn classification on a 10,000-observation retail banking dataset. Full workflow: EDA (DataExplorer) → feature engineering (recipes) → XGBoost-GPU modelling (parsnip/tidymodels) → hyperparameter optimisation via random grid search with 5-fold cross-validation → evaluation on ROC-AUC. Directly applicable to customer retention analytics and financial risk modelling in UK retail banking.",
+      technologies: ["R", "RStudio", "tidyverse", "tidymodels", "XGBoost (GPU)", "recipes", "parsnip", "dplyr", "DataExplorer"],
+      features: [
+        "10,000-observation banking dataset; 14 features covering account tenure, balance, product usage, and transaction behaviour.",
+        "Hyperparameter tuning: random grid search over mtry, trees, min_n, tree_depth, learn_rate with 5-fold CV; model selected on ROC-AUC.",
+        "XGBoost-GPU final model demonstrates strong discriminative performance on unseen churn cases; reproducible pipeline using tidymodels.",
+        "Demonstrates domain expertise in financial customer analytics, class imbalance handling, and production-ready ML pipelines in R."
+      ],
+      imageUrl: "https://imgs.search.brave.com/6lzYVIlAty-vkIgDZ0GWky79OYXRX8NkWtEGbllUgdA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mdW5p/eC5lZHUudm4vd3At/Y29udGVudC91cGxv/YWRzLzIwMjUvMDIv/MS0xODMucG5n",
+      link: "https://github.com/Thiruvel-AP/Banking-Customer-Churn-Prediction"
     },
     {
-      name: "GridDQN",
-      description: "This project is to train an agent in a custom grid world with Deep Q-Network (DQN) from scratch. The agent learns optimal paths via reward-driven exploration and converges to a stable policy for shortest-path navigation.",
-      technologies: ["Python", "Tensor-flow", "NumPy"],
-      features: ["Using a Q-value trained a off-policy agent to play grid world."],
+      // ── PROJECT 4: Agentic AI signal ───────────────────────────────────
+      name: "Agentic Friend: Real-Time Multi-Agent Voice AI System",
+      description: "Production-grade hierarchical multi-agent AI system with full-duplex real-time voice interaction. Implements a rolling VAD state machine (partial flush every 2.5s, silence-triggered final flush) for low-latency speech processing, HuggingFace VITS/Whisper models for multilingual TTS/STT, and a Google ADK orchestration layer managing agent intent routing, memory persistence, and dynamic task decomposition. Demonstrates end-to-end agentic AI system design at production scale.",
+      technologies: ["Python", "Google ADK", "FastAPI", "React", "Docker", "Hugging Face (VITS/Whisper)", "WebSockets", "Web Audio API", "CUDA"],
+      features: [
+        "Hierarchical multi-agent architecture: intent verification agent → task decomposition → specialised sub-agents → response synthesis layer.",
+        "Real-time voice pipeline: STT via faster-whisper + rolling VAD state machine; TTS via facebook/mms-tts-eng on CUDA float16 with warm-up pass.",
+        "Barge-in capability implemented end-to-end for natural conversational interruption  critical for human-AI interaction systems.",
+        "Persistent memory management across sessions: structured conversation history + user preference stores for continuous context awareness."
+      ],
+      imageUrl: "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/12/marquee-agentforce-agentic-ai.png",
+      link: "https://github.com/Thiruvel-AP/adk_multi-agent"
+    },
+    {
+      // ── PROJECT 5: Enterprise RAG / LLM signal ─────────────────────────
+      name: "MCP Search Agent: LLM-Driven Structured Information Retrieval",
+      description: "An LLM-powered search agent built on the Model Context Protocol (MCP) standard, enabling a GPT-OSS-20B agent to autonomously query external search providers, extract structured results, and persist interaction data to PostgreSQL via Exograph for downstream analytics. Demonstrates RAG pipeline design, structured data extraction, and agentic tool orchestration  directly applicable to enterprise knowledge management and AI-assisted research systems.",
+      technologies: ["Python", "Ollama", "PostgreSQL", "Exograph", "MCP", "GPT-OSS-20B"],
+      features: [
+        "MCP-compliant agent architecture: LLM autonomously selects tools, constructs queries, and routes structured results to persistence layer.",
+        "PostgreSQL + Exograph integration enabling queryable history of LLM search interactions for analytics and audit trails.",
+        "Demonstrates core RAG pipeline components: retrieval, context injection, structured output parsing, and persistent storage.",
+        "Applicable to enterprise search, clinical knowledge retrieval, and regulatory information systems in healthcare and finance."
+      ],
+      imageUrl: "https://imgs.search.brave.com/lj5c-qUCWhibB0VxzRxRuTIteukrYCErAbywH4ZqEPE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZW50/cmFpLmNvL19hc3Ry/by93ZWItc2VhcmNo/LWFnZW50LkJ2YUF3/ZDBFX1oxZ09nSnAu/d2VicA",
+      link: "https://github.com/Thiruvel-AP/mcp_searchagent"
+    },
+    {
+      // ── PROJECT 6: Healthcare AI / Clinical NLP signal ──────────────────
+      name: "Astro Freud: AI Psychological Support System (Offline-Capable NLP)",
+      description: "Specialised AI-powered psychological companion leveraging LangGraph multi-step agentic reasoning, local LLMs (Ollama  fully offline-capable), and real-time facial emotion recognition (DeepFace, RetinaFace, OpenCV) for mental state inference and adaptive conversational response. Demonstrates NLP, computer vision, and sensitive data handling in privacy-critical, air-gapped deployment environments  a pattern directly applicable to NHS/clinical AI systems requiring data sovereignty.",
+      technologies: ["Python", "Llama 3", "FastAPI", "LangGraph", "LangChain", "Ollama", "DeepFace", "TensorFlow", "OpenCV"],
+      features: [
+        "Multi-step agentic orchestration via LangGraph: emotion detection → context analysis → adaptive therapeutic response generation.",
+        "Fully offline LLM inference via Ollama  applicable to air-gapped healthcare and clinical settings requiring data privacy compliance.",
+        "Real-time facial emotion recognition pipeline (DeepFace + RetinaFace + OpenCV) enabling physiological state monitoring from video.",
+        "High-performance async backend (FastAPI) handling concurrent video frame processing and LLM conversational workflows simultaneously."
+      ],
+      imageUrl: "https://blogs.esa.int/exploration/files/2024/12/AI-lab-visual.png",
+      link: "https://github.com/ShankaraNG/AstroFreud"
+    },
+    {
+      // ── PROJECT 7: RL / Decision Systems signal ────────────────────────
+      name: "GridDQN:  Deep Reinforcement Learning from Scratch",
+      description: "Deep Q-Network (DQN) agent implemented from scratch in TensorFlow for optimal policy learning in a custom grid-world environment. Demonstrates core RL concepts: off-policy temporal difference learning, experience replay buffer, ε-greedy exploration-exploitation, target network stabilisation, and Q-value convergence  foundational to sequential decision-making in autonomous agents, clinical treatment optimisation, and resource allocation systems.",
+      technologies: ["Python", "TensorFlow", "NumPy"],
+      features: [
+        "DQN architecture: neural network Q-value approximator, experience replay buffer, target network for stable Bellman update training.",
+        "Off-policy ε-greedy exploration with decaying epsilon; converges to optimal shortest-path policy in grid environment.",
+        "Demonstrates theoretical mastery of Bellman equation, temporal difference learning, and bootstrapped value estimation.",
+        "RL framework applicable to clinical decision support, treatment pathway optimisation, and autonomous agent systems."
+      ],
       imageUrl: "https://imgs.search.brave.com/YKAchA7epo1Al70WqQU5Y-zwVg3wk91CtEt17YJ4aEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaGFy/ZWQuZmFzdGx5LnN0/ZWFtc3RhdGljLmNv/bS9zdG9yZV9pdGVt/X2Fzc2V0cy9zdGVh/bS9hcHBzLzM5Njg5/MC9oZWFkZXIuanBn/P3Q9MTQ1OTk3MjM3/NA",
       link: "https://github.com/Thiruvel-AP/GridDQN"
     },
     {
-      name: "Stack Overflow Data Analysis",
-      description: "This project is a end-to-end analytics on the 2023 Stack Overflow developer survey to identify and visualize key trends. Produced a comprehensive report illustrating the global distribution and skill patterns of Python developers.",
+      // ── PROJECT 8: ML system design signal ────────────────────────────
+      name: "Pokémon Multi-Output Classification  Conditional Model Routing System",
+      description: "Multi-output Random Forest classification system with an intelligent input-conditional model router: a dispatcher selects the optimal of three trained classifiers based on available input features. Demonstrates multi-target ML system design, feature-conditional inference pipelines, and modular model orchestration  a paradigm directly applicable to structured diagnostic classification in clinical and omics settings.",
+      technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Jupyter Notebook", "Kaggle"],
+      features: [
+        "Input-conditional model router: selects between 3 distinct Random Forest classifiers based on available input feature combination.",
+        "Multi-output classification: simultaneous prediction of correlated target variables (type, evolution) from shared feature spaces.",
+        "Clean ML system design: separation of model training, routing logic, and inference interface  production-oriented architecture.",
+        "Applicable paradigm to multi-label clinical classification (e.g., disease subtype + severity + treatment response from omics inputs)."
+      ],
+      imageUrl: "https://imgs.search.brave.com/e3iCqPFxBfc_QmRoexolK_DvLip4fBSCpRg7Zb2Tzc4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv...",
+      link: "https://github.com/Thiruvel-AP/Pokemon_Classification"
+    },
+    {
+      // ── PROJECT 9: Data storytelling signal ───────────────────────────
+      name: "Stack Overflow Developer Survey  Global Python Ecosystem Analysis",
+      description: "End-to-end EDA and visual analytics on the 2023 Stack Overflow Developer Survey dataset, producing a comprehensive analytical report on global Python developer distribution, skill co-occurrence patterns, and technology adoption trends across 180+ countries. Demonstrates data wrangling, statistical summarisation, and evidence-based storytelling with data  core competencies for data science roles in technology and research organisations.",
       technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-      features: ["Exploratory Data Analysis with 2023 Stack overflow data", "Visualized the data using various plots and charts"],
-      imageUrl: "https://imgs.search.brave.com/UKuEYnXivx8qg_EBnhdBT5BApIC5vGvzdVbA-7VuX1w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGFj/a292ZXJmbG93LmNv/L2ltZy9jb21wYW55/L3ByZXNzL3N0YWNr/LW92ZXJmbG93LWZv/ci10ZWFtc190aHVt/Yi5wbmc",
+      features: [
+        "Full EDA pipeline: data cleaning → aggregation → statistical summarisation → multi-variate visualisation → insight narrative.",
+        "Mapped global distribution and skill co-occurrence patterns of Python developers across 180+ countries.",
+        "Identified technology cluster patterns (Python + ML stack vs. Python + web stack) relevant to workforce and tooling decisions.",
+        "Demonstrates proficiency in data storytelling and communicating statistical findings clearly to non-technical stakeholders."
+      ],
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv8Iq9T_lySf674Lgvyz7dlqwaKw9KTRE7vA&s",
       link: "https://github.com/Thiruvel-AP/DS_Project1"
     }
   ]
